@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+set ip [lindex $argv 0]
+set user [lindex $argv 1]
+set passwd [lindex $argv 2]
+set src_file [lindex $argv 3]
+set des_dir [lindex $argv 4]
+set timeout -1
+spawn scp -r $src_file $user@$ip:$des_dir
+expect {
+"yes/no"     { send "yes\r"; exp_continue }
+"password:"  { send "$passwd\r" }
+}
+expect "100%"
+expect eof
