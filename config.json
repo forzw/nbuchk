@@ -1,0 +1,11 @@
+{
+    "version": "1.0.0",
+    "update": "2023-01-24",
+    "license": "None",
+    "author": "Kevin Chen",
+    "run_log": "/usr/openv/scripts/nbuchk/logs/run.log",
+    "water_low": "80",
+    "water_high": "90",
+    "verbose": false,
+    "input_type": "cmd"
+}
